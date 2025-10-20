@@ -6,8 +6,8 @@ from requests import request
 try:
     from settings import SOLVIUM_KEY
 except ImportError:
-    SOLVIUM_KEY = "Z0AGIJkNHQG55BLEpihJsaApVZzc41t8"  # Замініть на ваш повний ключ
-    CAPTCHA_KEY_2CAPTCHA = "dd9a30e28506247a2d72aecf446bbc24"
+    SOLVIUM_KEY = ""  # Замініть на ваш повний ключ
+    CAPTCHA_KEY_2CAPTCHA = ""
 
 try:
     from config import captcha_ids
@@ -258,5 +258,6 @@ class CaptchaSolver:
                     raise Exception(f'Solve captcha error: {error_text}')
 
             sleep(5)
+
 
         raise Exception(f'Captcha expired after {42 * 5} seconds')
